@@ -1,24 +1,22 @@
 <script setup lang="ts">
 import { useModal } from 'vue-final-modal';
-import ModalConfirmPlainCss from '~/components/ModalConfirmPlainCss.vue';
+import SimpleModal from '~/components/SimpleModal.vue';
 
 const { open, close } = useModal({
-	component: ModalConfirmPlainCss,
+	component: SimpleModal,
 	attrs: {
-		name: 'Hard no!',
+		name: 'A name',
+		description: 'A description',
 		onConfirm() {
 			close();
 		},
-	},
-	slots: {
-		default: '<p>The content of the modal</p>',
 	},
 });
 </script>
 
 <template>
 	<section>
-		<h1>Preview</h1>
+		<h1>A single modal</h1>
 		<button @click="open">Open Modal</button>
 	</section>
 </template>

@@ -1,16 +1,10 @@
 <script setup lang="ts">
 import { VueFinalModal } from 'vue-final-modal';
 
-const props = defineProps<{
-	name: {
-		type: String;
-		default: "Hard no!";
-	};
+defineProps<{
+	name?: string;
+	description?: string;
 }>();
-
-// defineProps<{
-// 	title?: string;
-// }>();
 
 const emit = defineEmits<{
 	(e: 'confirm'): void;
@@ -25,7 +19,7 @@ const emit = defineEmits<{
 		content-transition="vfm-fade"
 	>
 		<h1>{{ name }}</h1>
-		<slot />
+		<p>{{ description }}</p>
 		<button @click="emit('confirm')">Confirm</button>
 	</VueFinalModal>
 </template>

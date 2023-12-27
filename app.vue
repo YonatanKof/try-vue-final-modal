@@ -5,17 +5,32 @@ import { ModalsContainer } from 'vue-final-modal';
 <template>
 	<main>
 		<header>
-			<h3>Default Layout Header</h3>
+			<h3>Header</h3>
+			<span>
+				<nuxt-link to="/">Multiple Modals</nuxt-link> 
+				•
+				<nuxt-link to="/singlemodal">Single Modal</nuxt-link>
+			</span>
 		</header>
 		<NuxtPage />
 		<ModalsContainer />
 		<footer>
-			<h3>Default Layout Footer</h3>
+			<h5>Footer</h5>
 		</footer>
 	</main>
 </template>
 
 <style>
+.router-link-active{
+	color: green;
+	font-weight: bold;
+}
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
 body {
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
 		'Helvetica Neue', sans-serif;
