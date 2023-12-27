@@ -7,6 +7,7 @@ defineProps<{
 }>();
 
 const emit = defineEmits<{
+	(e: 'update:modelValue', modelValue: boolean): void;
 	(e: 'confirm'): void;
 }>();
 </script>
@@ -17,9 +18,11 @@ const emit = defineEmits<{
 		content-class="confirm-modal-content"
 		overlay-transition="vfm-fade"
 		content-transition="vfm-fade"
+		@update:model-value="(val) => emit('update:modelValue', val)"
 	>
 		<h1>{{ name }}</h1>
 		<p>{{ description }}</p>
+		<slot />
 		<button @click="emit('confirm')">Confirm</button>
 	</VueFinalModal>
 </template>

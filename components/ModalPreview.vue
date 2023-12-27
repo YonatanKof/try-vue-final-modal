@@ -20,6 +20,6 @@ const { open, close } = useModal({
 </script>
 
 <template>
-	<button @click="open"> Open Modal </button>
+	<!-- <button @click="open"> Open Modal </button> -->
 	<ModalsContainer />
 </template>
