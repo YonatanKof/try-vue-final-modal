@@ -2,7 +2,7 @@
 
 <template>
 	<section>
-		<h1>Page: Try!</h1>
+		<h1>Try!</h1>
 		<List />
 	</section>
 </template>

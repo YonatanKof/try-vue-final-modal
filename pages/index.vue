@@ -1,8 +1,7 @@
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
 <template>
-	<div>Page: foo</div>
+	<section><h1>Index</h1></section>
 </template>
 
 <style scoped></style>
