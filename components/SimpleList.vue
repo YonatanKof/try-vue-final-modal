@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import mockData from '~/assets/MockData.json';
+
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import mockData from '~/assets/MockData.json';
 			<p id="mata-data">{{ data.shape }}</p>
 			<hr />
 			<p v-if="data.description">{{ data.description }}</p>
+			<ModalPreview :name-preview="data.name" :description-preview="data.description"/>
 		</article>
 	</section>
 </template>

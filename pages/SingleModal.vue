@@ -5,8 +5,8 @@ import SimpleModal from '~/components/SimpleModal.vue';
 const { open, close } = useModal({
 	component: SimpleModal,
 	attrs: {
-		name: 'A name',
-		description: 'A description',
+		name: 'A name in attrs',
+		description: 'A description passed in attrs',
 		onConfirm() {
 			close();
 		},
